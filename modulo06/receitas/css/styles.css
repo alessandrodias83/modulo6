@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+    background: #fff;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+}
+
+/*menu lateral*/
+.siderbar {
+    background: #29313C;
+    height: 100vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.siderbar .titulo {
+    font-family: "Dancing Script", cursive;
+    font-size: 48px;
+    font-weight: bolder;
+    color: #6E9DA9;
+    margin-bottom: 20px;
+}
+
+.siderbar ul li {
+    list-style: none;
+    background: #39414B;
+    padding: 15px 50px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #6E9DA9;
+    font-size: 20px;
+}
+
+.siderbar ul li ion-icon {
+    color: #fff;
+}
+
+
+/*detalhes receitas*/
+
+.view {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 70%;
+    padding: 10px;
+}
+
+.view .titulo {
+    font-size: 40px;
+}
+
+/*navbar*/
+
+.pagina .navbar .grupo .fechar ion-icon{
+    background: #E5E5E5;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/*Adicionar receita*/
+.view .entrada input{
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.view .entrada textarea {
+    height: 16vh;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.view button {
+    background: #53AA84;
+    border: none;
+    height: 4vh;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.view button ion-icon {
+    color: #fff;
+    font-size: 18px;
+}
+
+.ingredientes .titulo {
+    display: none;
+}
+
+.modo-de-preparo .titulo {
+    display: none;
+}
+
