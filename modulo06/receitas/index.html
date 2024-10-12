@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastecamp</title>
+</head>
+
+<body>
+    <div class="app">
+
+        <!--Menu lateral-->
+        <div class="siderbar">
+            <div class="titulo">Tastecamp</div>
+            <ul class="receitas">
+                <li>
+                    <ion-icon name="fast-food-outline">Strogonoff</ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="fast-food-outline">Lasanha</ion-icon>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="view">
+
+            <!--Página de detalhes da receita-->
+            <div class="pagina receita escondido">
+                <div class="navbar">
+                    <div class="grupo">
+                        <div class="botao excluir">
+                            <ion-icon name="trash-outline"></ion-icon>
+                        </div>
+
+                        <div class="botao adicionar">
+                            <ion-icon name="add"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="titulo"></div>
+
+                <div class="ingredientes">
+                    <div class="titulo">Ingredientes</div>
+                    <div class="destaque"></div>
+                </div>
+
+                <div class="modo-de-preparo">
+                    <div class="titulo">Modo de Preparos</div>
+                    <div class="destaque"></div>
+                </div>
+            </div>
+
+            <!--Página de Adcicionar Receitas-->
+            <div class="pagina adicionar-receita">
+                <div class="navbar">
+                    <div class="grupo">
+                        <div class="botao fechar">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="titulo">Adicionar receita</div>
+
+                <div class="entrada">
+                    <div class="label">Nome da Receita</div>
+                    <input type="text" class="nome-receita">
+                </div>
+
+                <div class="entrada">
+                    <div class="label">Ingredientes</div>
+                    <textarea class="ingredientes-receita"></textarea>
+                </div>
+
+                <div class="entrada">
+                    <div class="label">Modo de Preparo</div>
+                    <textarea class="modo-de-preparo"></textarea>
+                </div>
+
+                <button class="salvar">
+                    <ion-icon name="save"></ion-icon>
+                    Adicionar Receita
+                </button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons,js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
