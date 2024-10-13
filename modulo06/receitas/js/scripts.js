@@ -35,13 +35,31 @@ function adicionarReceitas() {
     }
 
 
-    //colocar no array;
-    receitas.push(novaReceita);
+    //1 - enviar receita;
+    const promessa = axios.post("https://mock-api.driven.com.br/api/v2/tastecamp/receitas", novaReceita);
+
+
+    // 2 - receber a resposta e ver como ela é;
+    promessa.then(receberResposta);
+
+    // 4 - executar uma função caso dê erro.
+    promessa.catch(mostrarErro);
 
 
     // renderizar na tela.
     renderizarReceitas();
-
 }
 
-console.log(axios)
+// 3 - processar a resposta
+function receberResposta(resposta) {
+    console.log(resposta)
+
+    alert(`A receita ${resposta.data.titulo} foi adicionada com sucesso!`);
+    document.querySelector(".nome-receita").value = "";
+    document.querySelector(".ingredientes-receita").value = "";
+    document.querySelector(".modo-preparo-receita").value = "";
+}
+
+function mostrarErro() {
+    alert("Ocorreu um erro, tente fazer isso mais tarde!")
+}
