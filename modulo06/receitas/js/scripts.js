@@ -15,9 +15,9 @@ function renderizarReceitas() {
 }
 
 function buscarReceitas() {
-   const promessa = axios.get("https://mock-api.driven.com.br/api/v2/tastecamp/receitas");
-   promessa.then(processarListaRecebida);
-   promessa.catch(mostrarErro);
+    const promessa = axios.get("https://mock-api.driven.com.br/api/v2/tastecamp/receitas");
+    promessa.then(processarListaRecebida);
+    promessa.catch(mostrarErro);
 }
 
 function processarListaRecebida() {
@@ -46,7 +46,7 @@ function adicionarReceitas() {
     // 4 - executar uma função caso dê erro.
     promessa.catch(mostrarErro);
     // renderizar na tela.
-    
+
 }
 
 // 3 - processar a resposta
@@ -61,8 +61,28 @@ function receberResposta(resposta) {
     buscarReceitas();
 }
 
-function mostrarErro() {
-    alert("Ocorreu um erro, tente fazer isso mais tarde!")
+function mostrarErro(erro) {
+
+    /* if (erro.response.status === 422) {
+         alert("Verifique se você preencheu todos os campos a receita!")
+     } else if(erro.response.status === 409) {
+         alert("Uma receita com esse título ja existe! Escolha outro none!")
+     } else {
+         alert("Ocorreu um erro desconhecido, tente novamente mais tarde!")
+     }
+         */
+
+    switch (erro.response.status) {
+        case 422:
+            alert("Verifique se você preencheu todos os campos a receita!");
+            break;
+        case 409:
+            alert("Uma receita com esse título ja existe! Escolha outro none!")
+            break
+        default:
+            alert("Ocorreu um erro desconhecido, tente novamente mais tarde!")
+            break;
+    }
 }
 
 //funções que são executadas quando abrir o site
