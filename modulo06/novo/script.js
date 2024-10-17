@@ -77,7 +77,7 @@ console.log(produtosComDesconto);
 const hortifruti = filter()
 console.log(hortifruti)*/
 
-function selecionaHortifruti(prod) {
+/*function selecionaHortifruti(prod) {
     //if(prod.categoria === "hortifruti") {
       //  return true;
    // } else {
@@ -88,7 +88,7 @@ function selecionaHortifruti(prod) {
 }
 
 const hortifruti = produtos.filter(selecionaHortifruti);
-console.log(hortifruti)
+console.log(hortifruti)*/
 
 
 
@@ -104,3 +104,6 @@ function buscarBatata(prod) {
 
 const batata = produtos.find(buscarBatata);
 console.log(batata);
+
+const hortifruti = produtos.filter((prod) => prod.categoria === "hortifruti")
+console.log(hortifruti)
